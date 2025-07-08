@@ -2,5 +2,24 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
+        <VBox id="main" justifyContent="Center" alignItems="Center" class="sapUiSmallMargin">
+            <Panel id="FeedbackPanel" width="400px" headerText="Feedback Form">
+                <VBox id="innerBox">
+                    <Label text="Name" labelFor="nameInput" id="lable1" />
+                    <Input id="nameInput" placeholder="Enter your name here" />
+                    <Label text="Email" labelFor="emailInput" id="lable2" />
+                    <Input id="emailInput" placeholder="Enter your email here" />
+                    <Label text="Feedback" labelFor="feedbackInput" id="lable4" />
+                    <TextArea rows="4" width="100%" id="feedbackInput"
+                        placeholder="Type your feedback here" />
+                    <Label text="Rating" labelFor="RatingInput" id="lable3" />
+                    <RatingIndicator id="RatingInput" maxValue="5" value="0" iconSize="1.5rem" />
+                    <HBox gap="10px" id="buttons">
+                        <Button text="Submit" press="onSubmit" type="Emphasized" id="submitBtn" />
+                        <Button text="Clear" press="onClear" type="Reject" id="ClearBtn" />
+                    </HBox>
+                </VBox>
+            </Panel>
+        </VBox>
     </Page>
 </mvc:View>
