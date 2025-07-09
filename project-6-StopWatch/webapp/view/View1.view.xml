@@ -1,0 +1,20 @@
+<mvc:View
+    controllerName="project6.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+    <Page title="Simple Stopwatch">
+        <VBox class="sapUiSmallMargin" alignItems="Center" justifyContent="Center">
+            <!-- Display Time -->
+            <Text id="timeDisplay" text="00:00:00" class="sapUiLargeMargin" 
+                  design="Bold" textAlign="Center" />
+
+            <!-- Buttons -->
+            <HBox class="sapUiSmallMargin">
+                <Button text="Start" type="Accept" press="onStart" />
+                <Button text="Stop" type="Reject" press="onStop" class="sapUiTinyMarginBeginEnd" />
+                <Button text="Reset" type="Attention" press="onReset" />
+            </HBox>
+        </VBox>
+    </Page>
+</mvc:View>
