@@ -2,5 +2,14 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
+        <VBox class="sapUiSmallMargin">
+            <Panel headerText="📝 To-Do List">
+                <HBox>
+                    <Input placeholder="🖊️ Enter new task" width="80%"></Input>
+                    <Button text="Add" icon="sap-icon://add" type="Emphasized"></Button>
+                </HBox>
+
+            </Panel>
+        </VBox>
     </Page>
 </mvc:View>
