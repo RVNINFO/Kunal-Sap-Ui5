@@ -1,0 +1,48 @@
+<mvc:View controllerName="project5.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <Page id="page" title="{i18n>title}">
+        <VBox class="sapUiMediumMargin" justifyContent="Center" alignItems="Center">
+            <Panel width ="600px">
+                <VBox>
+                    <Input id="descInput" placeholder="Description" />
+                    <Input id="amountInput" placeholder="Amount" type="Number" />
+                    <Select id="categorySelect" width="200px">
+                        <items>
+                            <core:Item key="Food" text="Food" />
+                            <core:Item key="Transport" text="Transport" />
+                            <core:Item key="Shopping" text="Shopping" />
+                            <core:Item key="Others" text="Others" />
+                        </items>
+                    </Select>
+                    <Button text="Add Expense" class="sapUiSmallMarginTop sapUiSmallMarginBottom"
+                        press="onAddExpense" />
+                    <Table id="expenseTable" items="{expenses>/list}">
+                        <columns>
+                            <Column>
+                                <Text text="Description" />
+                            </Column>
+                            <Column>
+                                <Text text="Amount" />
+                            </Column>
+                            <Column>
+                                <Text text="Category" />
+                            </Column>
+                        </columns>
+                        <items>
+                            <ColumnListItem>
+                                <cells>
+                                    <Text text="{expenses>description}" />
+                                    <Text text="{expenses>amount}" />
+                                    <Text text="{expenses>category}" />
+                                </cells>
+                            </ColumnListItem>
+                        </items>
+                    </Table>
+                    <Text id="totalText" class="sapUiSmallMarginTop" text="Total: ₹0" />
+                </VBox>
+            </Panel>
+        </VBox>
+    </Page>
+</mvc:View>
