@@ -1,6 +1,26 @@
 <mvc:View controllerName="project3.controller.View1"
     xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m">
+    xmlns="sap.m"
+    displayBlock="true">
     <Page id="page" title="{i18n>title}">
+        <VBox id="main" class="sapUiSmallMargin" justifyContent="Center" alignItems="Center">
+            <Panel width="600px" id="quizPanel" headerText="🎯 Quiz App">
+                <VBox id="content">
+                    <Text id="question" text="{/currentQuestion/question}" />
+                    <RadioButtonGroup id="optionsGroup" columns="1" select="onSelectOption">
+                        <RadioButton id="op1" text="{/currentQuestion/options/0}" />
+                        <RadioButton id="op2" text="{/currentQuestion/options/1}" />
+                        <RadioButton id="op3" text="{/currentQuestion/options/2}" />
+                        <RadioButton id="op4" text="{/currentQuestion/options/3}" />
+                    </RadioButtonGroup>
+
+                    <Button
+                        id="nextButton" text="Next" type="Emphasized" press="onNextQuestion"
+                        class="sapUiSmallMarginTop" />
+                    <Text
+                        id="scoreText" text="{/scoreText}" class="sapUiSmallMarginTop" />
+                </VBox>
+            </Panel>
+        </VBox>
     </Page>
 </mvc:View>

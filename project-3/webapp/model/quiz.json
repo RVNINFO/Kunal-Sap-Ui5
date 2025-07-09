@@ -1,0 +1,29 @@
+{
+  "questions": [
+    {
+      "question": "What does SAP stand for?",
+      "options": ["Systems Applications Products", "Simple App Platform", "Secure Access Protocol", "System Android Performance"],
+      "answer": 0
+    },
+    {
+      "question": "Which programming language is used in SAP UI5?",
+      "options": ["Java", "JavaScript", "Python", "Ruby"],
+      "answer": 1
+    },
+    {
+      "question": "What is the name of SAP's in-memory database?",
+      "options": ["SAP DB", "HANA", "MaxDB", "Sybase"],
+      "answer": 1
+    },
+    {
+      "question": "Which of these is a common protocol used for SAP integrations?",
+      "options": ["HTTP", "RFC", "SOAP", "All of the above"],
+      "answer": 3
+    },
+    {
+      "question": "What is the primary purpose of SAP Fiori?",
+      "options": ["Database management", "Enterprise resource planning", "User experience design", "Supply chain optimization"],
+      "answer": 2
+    }
+  ]
+}
