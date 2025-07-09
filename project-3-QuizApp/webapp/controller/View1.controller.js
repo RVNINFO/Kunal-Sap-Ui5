@@ -69,6 +69,7 @@ sap.ui.define([
                 this.byId("question").setText("Thanks for participating!");
             }
         }
+        
     });
 });
 

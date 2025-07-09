@@ -1,0 +1,62 @@
+<mvc:View
+    controllerName="project4.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+
+    <Page id="page" title="Currency Convertor">
+        <VBox id="mainVBox" justifyContent="Center" alignItems="Center" class="sapUiSmallMargin">
+            <Panel width="500px" id="currencyPanel" headerText="Currency Converter">
+                <VBox id="innerVBox" justifyContent="Center" alignItems="Center">
+                    <!-- Input for amount -->
+                    <Input
+                        id="amountInput"
+                        width="268px"
+                        placeholder="Enter amount here" />
+
+                    <!-- Currency selection HBox -->
+                    <HBox id="currencySelectionBox" class="sapUiSmallMarginTop">
+                        <Select
+                            width="120px"
+                            id="fromCurrencySelect"
+                            items="{currency>/currencies}"
+                            selectedKey="USD">
+                            <items>
+                                <core:Item id="fromItem" key="{currency>}" text="{currency>}" />
+                            </items>
+                        </Select>
+
+                        <Label
+                            id="toText"
+                            text="to"
+                            class="sapUiTinyMargin sapUiTinyMarginBegin sapUiTinyMarginEnd" />
+
+                        <Select
+                            width="120px"
+                            id="toCurrencySelect"
+                            items="{currency>/currencies}"
+                            selectedKey="INR">
+                            <items>
+                                <core:Item id="toItem" key="{currency>}" text="{currency>}" />
+                            </items>
+                        </Select>
+                    </HBox>
+
+                    <!-- Convert button -->
+                    <Button
+                        class="sapUiSmallMarginTop"
+                        id="convertButton"
+                        text="Convert"
+                        type="Emphasized"
+                        press="onConvertPress" />
+
+                    <!-- Result display -->
+                    <Text
+                        class="sapUiSmallMarginTop"
+                        id="resultText"
+                        text="Converted amount will appear here." />
+                </VBox>
+            </Panel>
+        </VBox>
+    </Page>
+</mvc:View>
