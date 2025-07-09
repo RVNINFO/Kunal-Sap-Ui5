@@ -2,13 +2,29 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
-        <VBox class="sapUiSmallMargin">
-            <Panel headerText="📝 To-Do List">
-                <HBox>
-                    <Input placeholder="🖊️ Enter new task" width="80%"></Input>
-                    <Button text="Add" icon="sap-icon://add" type="Emphasized"></Button>
+        <VBox id="main" class="sapUiSmallMargin" justifyContent="Center" alignItems="Center">
+            <Panel
+                id="toDoPanel"
+                headerText="📝 To-Do List"
+                width="500px">
+                <HBox id="taskAddRow" gap="3vw">
+                    <Input
+                        id="taskInput"
+                        placeholder="🖊️ Enter new task" width="300px" />
+                    <Button
+                        id="addButton" text="Add" icon="sap-icon://add" type="Emphasized" 
+                        press="onAddTask"
+                        />
                 </HBox>
-
+                <List id="taskViewList" items="{/tasks}">
+                    <StandardListItem
+                        id="listItem"
+                        title="{text}" 
+                        type="Active"
+                        icon="{=${done}?'sap-icon://accept':'sap-icon://pending'}"
+                        press="onToggleStatus"
+                        info="{=${done}?'Done':'Pending'}"/>
+                </List>
             </Panel>
         </VBox>
     </Page>

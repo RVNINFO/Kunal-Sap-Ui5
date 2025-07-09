@@ -1,0 +1,10 @@
+{
+  "tasks": [
+    { "text": "Learn SAP UI5", "done": false },
+    { "text": "Learn Js", "done": false },
+    { "text": "Learn how to Play Chess", "done": true },
+    { "text": "Buy Chocolates", "done": true },
+    { "text": "Complete Assignments", "done": false },
+    { "text": "Create To-Do App", "done": true }
+  ]
+}
