@@ -2,5 +2,18 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
+        <VBox class="sapUiSmallMargin">
+            <Input id="input1" placeholder="Enter first number" type="Number" />
+            <Input id="input2" placeholder="Enter second number" type="Number" />
+
+            <HBox class="sapUiSmallMarginTop">
+                <Button text="+" press="onAdd" class="sapUiTinyMarginEnd" />
+                <Button text="-" press="onSubtract" class="sapUiTinyMarginEnd" />
+                <Button text="×" press="onMultiply" class="sapUiTinyMarginEnd" />
+                <Button text="÷" press="onDivide" />
+            </HBox>
+
+            <Text id="resultText" text="Result: " class="sapUiLargeMarginTop" />
+        </VBox>
     </Page>
 </mvc:View>
