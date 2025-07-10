@@ -1,0 +1,25 @@
+<mvc:View controllerName="project9.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    displayBlock="true">
+    <Page id="page">
+        <VBox id="main" justifyContent="Center" alignItems="Center" class="sapUiMediumMarginTop">
+            <Panel id="panel" width="600px" headerText="Random Quote">
+                <VBox
+                    id="innerBox"
+                    class="sapUiSmallMargin"
+                    alignItems="Center"
+                    justifyContent="Center"
+                    height="100%">
+                    <Text
+                        id="quoteText"
+                        text="{/quote}"
+                        textAlign="Center"
+                        wrapping="true"
+                        class="sapUiLargeMargin sapUiContentPadding" />
+                    <Button id="newQuoteBtn" text="New Quote" type="Emphasized" press="onNewQuote" />
+                </VBox>
+            </Panel>
+        </VBox>
+    </Page>
+</mvc:View>

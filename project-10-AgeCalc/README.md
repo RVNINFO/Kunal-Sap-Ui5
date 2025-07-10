@@ -1,7 +1,7 @@
 ## Application Details
 |               |
 | ------------- |
-|**Generation Date and Time**<br>Thu Jul 10 2025 00:39:10 GMT+0530 (India Standard Time)|
+|**Generation Date and Time**<br>Thu Jul 10 2025 22:26:18 GMT+0530 (India Standard Time)|
 |**App Generator**<br>SAP Fiori Application Generator|
 |**App Generator Version**<br>1.18.1|
 |**Generation Platform**<br>Visual Studio Code|
@@ -9,10 +9,10 @@
 |**Service Type**<br>None|
 |**Service URL**<br>N/A|
 |**Module Name**<br>project10|
-|**Application Title**<br>Voting App|
+|**Application Title**<br>Age Calculator|
 |**Namespace**<br>|
 |**UI5 Theme**<br>sap_horizon|
-|**UI5 Version**<br>1.136.3|
+|**UI5 Version**<br>1.138.0|
 |**Enable Code Assist Libraries**<br>False|
 |**Enable TypeScript**<br>False|
 |**Add Eslint configuration**<br>False|

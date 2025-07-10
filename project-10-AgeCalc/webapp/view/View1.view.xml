@@ -1,0 +1,18 @@
+<mvc:View controllerName="project10.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    displayBlock="true">
+    <Page id="page" title="{i18n>title}">
+        <VBox id="main" class="sapUiSmallMargin" alignItems="Center" justifyContent="Center"
+            height="100%">
+            <Text id="title" text="Age Calculator" class="sapUiTinyMarginBottom" />
+            <Label id="dateLabel" text="Select your Date of Birth:" />
+            <DatePicker id="dobPicker" placeholder="YYYY-MM-DD" />
+            <Button id="calcBtn" text="Calculate Age" press="onCalculateAge"
+                class="sapUiMediumMarginTop" />
+
+            <Text id="resultText" text="" class="sapUiLargeMarginTop" />
+
+        </VBox>
+    </Page>
+</mvc:View>

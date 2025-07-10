@@ -1,6 +1,31 @@
-<mvc:View controllerName="project8.controller.View1"
+<mvc:View
+    controllerName="project8.controller.View1"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
+    <Page id="page">
+        <VBox id="main" justifyContent="Center" alignItems="Center" class="sapUiSmallMargin">
+            <Panel id="panel" headerText="Contact Manager" width="500px">
+                <VBox id="innerMain">
+                    <Input id="nameInput" placeholder="Name" />
+                    <Input id="phoneInput" placeholder="Phone" />
+                    <Input id="emailInput" placeholder="Email" />
+                    <Button id="addButton" text="Add Contact" class="sapUiSmallMarginTop" press="onAddContact" />
+
+                    <List id="contactList" items="{contacts>/list}" class="sapUiSmallMarginTop">
+                        <CustomListItem id="contact">
+                            <HBox id="contactBox" justifyContent="SpaceBetween" width="100%">
+                                <VBox id="innerBox">
+                                    <Text id="name" text="{contacts>name}" />
+                                    <Text id="phone" text="{contacts>phone}" />
+                                    <Text id="email" text="{contacts>email}" />
+                                </VBox>
+                                <Button id="delBtn" icon="sap-icon://delete" type="Reject"
+                                    press="onDeleteContact" />
+                            </HBox>
+                        </CustomListItem>
+                    </List>
+                </VBox>
+            </Panel>
+        </VBox>
     </Page>
 </mvc:View>
