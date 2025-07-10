@@ -1,1 +1,4 @@
-/* Enter your custom styles here */
+[id$=resultText ]{
+  font-size: 1.5rem;
+  font-weight: bold;
+}

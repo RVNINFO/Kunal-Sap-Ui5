@@ -2,18 +2,27 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
-        <VBox class="sapUiSmallMargin">
-            <Input id="input1" placeholder="Enter first number" type="Number" />
-            <Input id="input2" placeholder="Enter second number" type="Number" />
+        <VBox id="main" class="sapUiSmallMargin" justifyContent="Center" alignItems="Center">
+            <Panel id="panel" width="600px">
+                <VBox id="innerDiv">
+                    <Input id="input1" placeholder="Enter first number" type="Number" />
+                    <Input id="input2" placeholder="Enter second number" type="Number" />
 
-            <HBox class="sapUiSmallMarginTop">
-                <Button text="+" press="onAdd" class="sapUiTinyMarginEnd" />
-                <Button text="-" press="onSubtract" class="sapUiTinyMarginEnd" />
-                <Button text="×" press="onMultiply" class="sapUiTinyMarginEnd" />
-                <Button text="÷" press="onDivide" />
-            </HBox>
+                    <HBox id="funtionBtns" class="sapUiSmallMarginTop">
+                        <Button id="plusbtn" text="+" press="onAdd" class="sapUiTinyMarginEnd" />
+                        <Button id="minbtn" text="-" press="onSubtract" class="sapUiTinyMarginEnd" />
+                        <Button id="mulbtn" text="×" press="onMultiply" class="sapUiTinyMarginEnd" />
+                        <Button id="divbtn" text="÷" press="onDivide" />
+                    </HBox>
 
-            <Text id="resultText" text="Result: " class="sapUiLargeMarginTop" />
+                    <Text id="resultText" text="Result: " class="sapUiLargeMarginTop" />
+
+                    <Text id="historySection" text="History: " class="sapUiLargeMarginTop" />
+                    <List id="historyList" items="{/history}">
+                        <StandardListItem id="calc" title="{calc}" />
+                    </List>
+                </VBox>
+            </Panel>
         </VBox>
     </Page>
 </mvc:View>
